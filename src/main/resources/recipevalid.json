@@ -1,0 +1,20 @@
+{
+  "inputs":[
+    {
+      "registry_name": "minecraft:iron_ingot",
+      "count": 2
+    },
+    {
+      "registry_name": "minecraft:diamond",
+      "count": 1
+    },
+    {
+      "registry_name": "minecraft:barrier",
+      "count": 8
+    }
+  ],
+  "output": {
+    "registry_name": "enderio:steel",
+    "count": 3
+  }
+}
