@@ -6,15 +6,11 @@
     },
     {
       "registry_name": "minecraft:diamond",
-      "count": "1"
+      "count": 1
     },
     {
       "registry_name": "minecraft:barrier",
       "count": 8
     }
-  ],
-  "output": {
-    "registry_name": "enderio:steel",
-    "count": 3
-  }
+  ]
 }

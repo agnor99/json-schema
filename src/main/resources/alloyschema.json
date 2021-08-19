@@ -2,30 +2,9 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Recipe",
   "description": "Describes an Alloying-Recipe",
-  "type": "object",
-  "properties": {
-    "inputs": {
-      "description": "Inputs for alloying",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "registry_name": {
-            "description": "registryname of the input",
-            "type": "string"
-          },
-          "count": {
-            "description": "amount of items",
-            "type": "number"
-          }
-        },
-        "required": ["registry_name", "count"]
-      },
-      "minItems": 1,
-      "maxItems": 3
-    },
-    "output": {
-      "description": "Output for recipe",
+
+  "definitions": {
+    "itemstack": {
       "type": "object",
       "properties": {
         "registry_name": {
@@ -39,6 +18,23 @@
       },
       "required": ["registry_name", "count"],
       "additionalProperties": false
+    }
+  },
+
+  "type": "object",
+  "properties": {
+    "inputs": {
+      "description": "Inputs for alloying",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/itemstack"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "output": {
+      "description": "Output for recipe",
+      "$ref": "#/definitions/itemstack"
     }
   },
   "required": ["inputs", "output"],
